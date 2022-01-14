@@ -139,21 +139,21 @@ class Bisq {
   }
 
   private updatePrice() {
-    axios.get<BisqTrade[]>('https://bisq.markets/api/trades/?market=bsq_bch', { timeout: 10000 })
-      .then((response) => {
-        const prices: number[] = [];
-        response.data.forEach((trade) => {
-          prices.push(parseFloat(trade.price) * 100000000);
-        });
-        prices.sort((a, b) => a - b);
-        this.price = Common.median(prices);
-        if (this.priceUpdateCallbackFunction) {
-          this.priceUpdateCallbackFunction(this.price);
-        }
-    }).catch((err) => {
-      logger.err('Error updating Bisq market price: ' + err);
-    });
+    try {
+      const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd', { timeout: 10000 });
+      //response = {"bitcoin-cash":{"usd":388.24}}
+      const usd = response["bitcoin-cash"]["usd"];
+      this.conversionRates = {
+        'USD': usd,
+      };
+      if (this.ratesChangedCallback) {
+        this.ratesChangedCallback(this.conversionRates);
+      }
+    } catch (e) {
+      logger.err('Error updating fiat conversion rates: ' + (e instanceof Error ? e.message : e));
+    }
   }
+}
 
   private async loadBisqDumpFile(): Promise<void> {
     try {
