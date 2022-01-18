@@ -31,11 +31,11 @@ class TransactionUtils {
       // @ts-ignore
       return transaction;
     }
-    const feePerBytes = Math.max(config.MEMPOOL.NETWORK === 'liquid' ? 0.1 : 1, (transaction.fee || 0) / (transaction.weight / 4));
+    const feePerVbytes = Math.max(config.MEMPOOL.NETWORK === 'liquid' ? 0.1 : 1, (transaction.fee || 0) / (transaction.weight / 4));
     const transactionExtended: TransactionExtended = Object.assign({
       vsize: Math.round(transaction.weight / 4),
-      feePerVsize: feePerBytes,
-      effectiveFeePerVsize: feePerBytes,
+      feePerVsize: feePerVbytes,
+      effectiveFeePerVsize: feePerVbytes,
     }, transaction);
     if (!transaction.status.confirmed) {
       transactionExtended.firstSeen = Math.round((new Date().getTime() / 1000));

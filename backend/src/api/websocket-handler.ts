@@ -181,7 +181,7 @@ class WebsocketHandler {
     }
     return {
       'mempoolInfo': memPool.getMempoolInfo(),
-      'BytesPerSecond': memPool.getBytesPerSecond(),
+      'vBytesPerSecond': memPool.getVBytesPerSecond(),
       'lastDifficultyAdjustment': blocks.getLastDifficultyAdjustmentTime(),
       'previousRetarget': blocks.getPreviousDifficultyRetarget(),
       'blocks': _blocks,
@@ -224,7 +224,7 @@ class WebsocketHandler {
     const mBlocks = mempoolBlocks.getMempoolBlocks();
     const mempool = memPool.getMempool();
     const mempoolInfo = memPool.getMempoolInfo();
-    const BytesPerSecond = memPool.getBytesPerSecond();
+    const vBytesPerSecond = memPool.getVBytesPerSecond();
     const rbfTransactions = Common.findRbfTransactions(newTransactions, deletedTransactions);
 
     for (const rbfTransaction in rbfTransactions) {
@@ -240,7 +240,7 @@ class WebsocketHandler {
 
       if (client['want-stats']) {
         response['mempoolInfo'] = mempoolInfo;
-        response['BytesPerSecond'] = BytesPerSecond;
+        response['vBytesPerSecond'] = vBytesPerSecond;
         response['transactions'] = newTransactions.slice(0, 6).map((tx) => Common.stripTransaction(tx));
       }
 

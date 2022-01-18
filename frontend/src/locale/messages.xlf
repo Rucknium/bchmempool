@@ -1055,13 +1055,13 @@
         <note priority="1" from="meaning">transaction.features</note>
       </trans-unit>
       <trans-unit id="e5026f6e33b13e7d8185288b9691d006a139d36d" datatype="html">
-        <source>Fee per Byte</source>
+        <source>Fee per vByte</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bisq/bisq-transaction/bisq-transaction.component.html</context>
           <context context-type="linenumber">64,66</context>
         </context-group>
         <note priority="1" from="description">Transaction fee</note>
-        <note priority="1" from="meaning">transaction.fee-per-Byte</note>
+        <note priority="1" from="meaning">transaction.fee-per-vbyte</note>
       </trans-unit>
       <trans-unit id="4f8b2bb476981727ab34ed40fde1218361f92c45" datatype="html">
         <source>Details</source>
@@ -2533,10 +2533,10 @@
           <context context-type="linenumber">171,175</context>
         </context-group>
         <note priority="1" from="description">sat/vB</note>
-        <note priority="1" from="meaning">shared.sat-Byte</note>
+        <note priority="1" from="meaning">shared.sat-vbyte</note>
       </trans-unit>
       <trans-unit id="855f852e5642a1279605465df0cbbe78c2622648" datatype="html">
-        <source>Based on average native segwit transaction of 140 Bytes</source>
+        <source>Based on average native segwit transaction of 140 vBytes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">46,48</context>
@@ -2705,12 +2705,12 @@
         <note priority="1" from="description">fees-box.high-priority</note>
       </trans-unit>
       <trans-unit id="0ae5beecbbfc96bcdf4f9a637aa72687e81ef5e1" datatype="html">
-        <source>Tx Bytes per second:</source>
+        <source>Tx vBytes per second:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
           <context context-type="linenumber">5,7</context>
         </context-group>
-        <note priority="1" from="description">footer.tx-Bytes-per-second</note>
+        <note priority="1" from="description">footer.tx-vbytes-per-second</note>
       </trans-unit>
       <trans-unit id="a5950b2ce4c3ea32de91034de8269781eb333d73" datatype="html">
         <source>Backend is synchronizing</source>
@@ -2725,7 +2725,7 @@
         <note priority="1" from="description">dashboard.backend-is-synchronizing</note>
       </trans-unit>
       <trans-unit id="50904e472d4671388a20fbbb1ee9dfc0a4586fa1" datatype="html">
-        <source>B/s</source>
+        <source>vB/s</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
           <context context-type="linenumber">11,15</context>
@@ -2734,8 +2734,8 @@
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">201,207</context>
         </context-group>
-        <note priority="1" from="description">B/s</note>
-        <note priority="1" from="meaning">shared.Bytes-per-second</note>
+        <note priority="1" from="description">vB/s</note>
+        <note priority="1" from="meaning">shared.vbytes-per-second</note>
       </trans-unit>
       <trans-unit id="60cd6fa18f925b42065d8cfb1a791efdc228b4c3" datatype="html">
         <source>Unconfirmed</source>
@@ -2967,12 +2967,12 @@
         <note priority="1" from="description">statistics.loading-graphs</note>
       </trans-unit>
       <trans-unit id="75c20c8a9cd9723d45bee0230dd582d7c2e4ecbc" datatype="html">
-        <source>Mempool by Bytes (sat/Byte)</source>
+        <source>Mempool by vBytes (sat/vByte)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-        <note priority="1" from="description">statistics.memory-by-Bytes</note>
+        <note priority="1" from="description">statistics.memory-by-vBytes</note>
       </trans-unit>
       <trans-unit id="add9d52e5bf541c941df44e251a5c1cafcc92e9d" datatype="html">
         <source>Invert</source>
@@ -2983,12 +2983,12 @@
         <note priority="1" from="description">statistics.component-invert.title</note>
       </trans-unit>
       <trans-unit id="dc15ec15e6206b40133f2c1b06095ce75aaee1ef" datatype="html">
-        <source>Transaction Bytes per second (B/s)</source>
+        <source>Transaction vBytes per second (vB/s)</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
           <context context-type="linenumber">53</context>
         </context-group>
-        <note priority="1" from="description">statistics.transaction-Bytes-per-second</note>
+        <note priority="1" from="description">statistics.transaction-vbytes-per-second</note>
       </trans-unit>
       <trans-unit id="date-base.just-now" datatype="html">
         <source>Just now</source>
