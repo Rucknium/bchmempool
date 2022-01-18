@@ -8,7 +8,7 @@ export interface WebsocketResponse {
   txConfirmed?: boolean;
   historicalDate?: string;
   mempoolInfo?: MempoolInfo;
-  vBytesPerSecond?: number;
+  BytesPerSecond?: number;
   lastDifficultyAdjustment?: number;
   previousRetarget?: number;
   action?: string;

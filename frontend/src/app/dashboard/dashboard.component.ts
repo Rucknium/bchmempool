@@ -32,7 +32,7 @@ interface EpochProgress {
 
 interface MempoolInfoData {
   memPoolInfo: MempoolInfo;
-  vBytesPerSecond: number;
+  BytesPerSecond: number;
   progressWidth: string;
   progressClass: string;
 }
@@ -55,7 +55,7 @@ export class DashboardComponent implements OnInit {
   mempoolInfoData$: Observable<MempoolInfoData>;
   difficultyEpoch$: Observable<EpochProgress>;
   mempoolLoadingStatus$: Observable<number>;
-  vBytesPerSecondLimit = 1667;
+  BytesPerSecondLimit = 1667;
   blocks$: Observable<Block[]>;
   transactions$: Observable<TransactionStripped[]>;
   latestBlockHeight: number;
@@ -86,11 +86,11 @@ export class DashboardComponent implements OnInit {
 
     this.mempoolInfoData$ = combineLatest([
       this.stateService.mempoolInfo$,
-      this.stateService.vbytesPerSecond$
+      this.stateService.BytesPerSecond$
     ])
     .pipe(
-      map(([mempoolInfo, vbytesPerSecond]) => {
-        const percent = Math.round((Math.min(vbytesPerSecond, this.vBytesPerSecondLimit) / this.vBytesPerSecondLimit) * 100);
+      map(([mempoolInfo, BytesPerSecond]) => {
+        const percent = Math.round((Math.min(BytesPerSecond, this.BytesPerSecondLimit) / this.BytesPerSecondLimit) * 100);
 
         let progressClass = 'bg-danger';
         if (percent <= 75) {
@@ -109,7 +109,7 @@ export class DashboardComponent implements OnInit {
 
         return {
           memPoolInfo: mempoolInfo,
-          vBytesPerSecond: vbytesPerSecond,
+          BytesPerSecond: BytesPerSecond,
           progressWidth: percent + '%',
           progressClass: progressClass,
           mempoolSizeProgress: mempoolSizeProgress,
@@ -278,7 +278,7 @@ export class DashboardComponent implements OnInit {
 
     return {
       labels: labels,
-      series: [mempoolStats.map((stats) => stats.vbytes_per_second)],
+      series: [mempoolStats.map((stats) => stats.Bytes_per_second)],
     };
   }
 

@@ -1147,14 +1147,14 @@
         <note from="meaning" priority="1">transaction.features</note>
       </trans-unit>
       <trans-unit datatype="html" id="e5026f6e33b13e7d8185288b9691d006a139d36d">
-        <source>Fee per vByte</source>
-        <target>vByteあたりの手数料</target>
+        <source>Fee per Byte</source>
+        <target>Byteあたりの手数料</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/bisq/bisq-transaction/bisq-transaction.component.html</context>
           <context context-type="linenumber">64,66</context>
         </context-group>
         <note from="description" priority="1">Transaction fee</note>
-        <note from="meaning" priority="1">transaction.fee-per-vbyte</note>
+        <note from="meaning" priority="1">transaction.fee-per-Byte</note>
       </trans-unit>
       <trans-unit datatype="html" id="4f8b2bb476981727ab34ed40fde1218361f92c45">
         <source>Details</source>
@@ -2752,11 +2752,11 @@
           <context context-type="linenumber">171,175</context>
         </context-group>
         <note from="description" priority="1">sat/vB</note>
-        <note from="meaning" priority="1">shared.sat-vbyte</note>
+        <note from="meaning" priority="1">shared.sat-Byte</note>
       </trans-unit>
       <trans-unit datatype="html" id="855f852e5642a1279605465df0cbbe78c2622648">
-        <source>Based on average native segwit transaction of 140 vBytes</source>
-        <target>140vBytesの平均ネイティブsegwitトランザクションに基づく</target>
+        <source>Based on average native segwit transaction of 140 Bytes</source>
+        <target>140Bytesの平均ネイティブsegwitトランザクションに基づく</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
           <context context-type="linenumber">46,48</context>
@@ -2940,13 +2940,13 @@
         <note from="description" priority="1">fees-box.high-priority</note>
       </trans-unit>
       <trans-unit datatype="html" id="0ae5beecbbfc96bcdf4f9a637aa72687e81ef5e1">
-        <source>Tx vBytes per second:</source>
+        <source>Tx Bytes per second:</source>
         <target>Tx vバイト毎秒:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
           <context context-type="linenumber">5,7</context>
         </context-group>
-        <note from="description" priority="1">footer.tx-vbytes-per-second</note>
+        <note from="description" priority="1">footer.tx-Bytes-per-second</note>
       </trans-unit>
       <trans-unit datatype="html" id="a5950b2ce4c3ea32de91034de8269781eb333d73">
         <source>Backend is synchronizing</source>
@@ -2962,8 +2962,8 @@
         <note from="description" priority="1">dashboard.backend-is-synchronizing</note>
       </trans-unit>
       <trans-unit datatype="html" id="50904e472d4671388a20fbbb1ee9dfc0a4586fa1">
-        <source>vB/s</source>
-        <target>vB/s</target>
+        <source>B/s</source>
+        <target>B/s</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
           <context context-type="linenumber">11,15</context>
@@ -2972,8 +2972,8 @@
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">201,207</context>
         </context-group>
-        <note from="description" priority="1">vB/s</note>
-        <note from="meaning" priority="1">shared.vbytes-per-second</note>
+        <note from="description" priority="1">B/s</note>
+        <note from="meaning" priority="1">shared.Bytes-per-second</note>
       </trans-unit>
       <trans-unit datatype="html" id="60cd6fa18f925b42065d8cfb1a791efdc228b4c3">
         <source>Unconfirmed</source>
@@ -3230,13 +3230,13 @@
         <note from="description" priority="1">statistics.loading-graphs</note>
       </trans-unit>
       <trans-unit datatype="html" id="75c20c8a9cd9723d45bee0230dd582d7c2e4ecbc">
-        <source>Mempool by vBytes (sat/vByte)</source>
+        <source>Mempool by Bytes (sat/Byte)</source>
         <target>vバイト単位のMempool（サトシ/vバイト）</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-        <note from="description" priority="1">statistics.memory-by-vBytes</note>
+        <note from="description" priority="1">statistics.memory-by-Bytes</note>
       </trans-unit>
       <trans-unit datatype="html" id="add9d52e5bf541c941df44e251a5c1cafcc92e9d">
         <source>Invert</source>
@@ -3248,13 +3248,13 @@
         <note from="description" priority="1">statistics.component-invert.title</note>
       </trans-unit>
       <trans-unit datatype="html" id="dc15ec15e6206b40133f2c1b06095ce75aaee1ef">
-        <source>Transaction vBytes per second (vB/s)</source>
-        <target>トランザクションvバイト毎秒（vB/s）</target>
+        <source>Transaction Bytes per second (B/s)</source>
+        <target>トランザクションvバイト毎秒（B/s）</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
           <context context-type="linenumber">53</context>
         </context-group>
-        <note from="description" priority="1">statistics.transaction-vbytes-per-second</note>
+        <note from="description" priority="1">statistics.transaction-Bytes-per-second</note>
       </trans-unit>
       <trans-unit datatype="html" id="date-base.just-now">
         <source>Just now</source>

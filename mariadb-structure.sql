@@ -19,7 +19,7 @@ CREATE TABLE `statistics` (
   `added` datetime NOT NULL,
   `unconfirmed_transactions` int(11) UNSIGNED NOT NULL,
   `tx_per_second` float UNSIGNED NOT NULL,
-  `vbytes_per_second` int(10) UNSIGNED NOT NULL,
+  `Bytes_per_second` int(10) UNSIGNED NOT NULL,
   `mempool_byte_weight` int(10) UNSIGNED NOT NULL,
   `fee_data` longtext NOT NULL,
   `total_fee` double UNSIGNED NOT NULL,
