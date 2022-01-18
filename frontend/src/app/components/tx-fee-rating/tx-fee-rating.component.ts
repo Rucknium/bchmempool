@@ -52,7 +52,7 @@ export class TxFeeRatingComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   calculateRatings(block: Block) {
-    const feePerByte = this.tx.effectiveFeePerVsize || this.tx.fee / (this.tx.weight / 4);
+    const feePervByte = this.tx.effectiveFeePerVsize || this.tx.fee / (this.tx.weight / 4);
     this.medianFeeNeeded = block.medianFee;
 
     // Block not filled
@@ -60,9 +60,9 @@ export class TxFeeRatingComponent implements OnInit, OnChanges, OnDestroy {
       this.medianFeeNeeded = 1;
     }
 
-    this.overpaidTimes = Math.round(feePerByte / this.medianFeeNeeded);
+    this.overpaidTimes = Math.round(feePervByte / this.medianFeeNeeded);
 
-    if (feePerByte <= this.medianFeeNeeded || this.overpaidTimes < 2) {
+    if (feePervByte <= this.medianFeeNeeded || this.overpaidTimes < 2) {
       this.feeRating = 1;
     } else {
       this.feeRating = 2;

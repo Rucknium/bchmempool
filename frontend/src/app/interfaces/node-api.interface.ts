@@ -3,7 +3,7 @@ export interface OptimizedMempoolStats {
   added: string;
   unconfirmed_transactions: number;
   tx_per_second: number;
-  Bytes_per_second: number;
+  vbytes_per_second: number;
   total_fee: number;
   mempool_byte_weight: number;
   vsizes: number[] | string[];
