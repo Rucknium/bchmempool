@@ -288,8 +288,8 @@ export class WebsocketService {
       this.stateService.mempoolInfo$.next(response.mempoolInfo);
     }
 
-    if (response.vBytesPerSecond !== undefined) {
-      this.stateService.vbytesPerSecond$.next(response.vBytesPerSecond);
+    if (response.BytesPerSecond !== undefined) {
+      this.stateService.BytesPerSecond$.next(response.BytesPerSecond);
     }
 
     if (response.lastDifficultyAdjustment !== undefined) {

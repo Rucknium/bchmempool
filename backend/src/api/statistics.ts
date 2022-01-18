@@ -57,7 +57,7 @@ class Statistics {
     }
     const currentMempool = memPool.getMempool();
     const txPerSecond = memPool.getTxPerSecond();
-    const vBytesPerSecond = memPool.getVBytesPerSecond();
+    const BytesPerSecond = memPool.getBytesPerSecond();
 
     logger.debug('Running statistics');
 
@@ -100,7 +100,7 @@ class Statistics {
       added: 'NOW()',
       unconfirmed_transactions: memPoolArray.length,
       tx_per_second: txPerSecond,
-      vbytes_per_second: Math.round(vBytesPerSecond),
+      Bytes_per_second: Math.round(BytesPerSecond),
       mempool_byte_weight: totalWeight,
       total_fee: totalFee,
       fee_data: '',
@@ -159,7 +159,7 @@ class Statistics {
               added,
               unconfirmed_transactions,
               tx_per_second,
-              vbytes_per_second,
+              Bytes_per_second,
               mempool_byte_weight,
               fee_data,
               total_fee,
@@ -208,7 +208,7 @@ class Statistics {
       const params: (string | number)[] = [
         statistics.unconfirmed_transactions,
         statistics.tx_per_second,
-        statistics.vbytes_per_second,
+        statistics.Bytes_per_second,
         statistics.mempool_byte_weight,
         statistics.fee_data,
         statistics.total_fee,
@@ -262,7 +262,7 @@ class Statistics {
   private getQueryForDays(div: number) {
     return `SELECT id, added, unconfirmed_transactions,
       tx_per_second,
-      vbytes_per_second,
+      Bytes_per_second,
       vsize_1,
       vsize_2,
       vsize_3,
@@ -414,7 +414,7 @@ class Statistics {
         added: s.added,
         unconfirmed_transactions: s.unconfirmed_transactions,
         tx_per_second: s.tx_per_second,
-        vbytes_per_second: s.vbytes_per_second,
+        Bytes_per_second: s.Bytes_per_second,
         mempool_byte_weight: s.mempool_byte_weight,
         total_fee: s.total_fee,
         vsizes: [

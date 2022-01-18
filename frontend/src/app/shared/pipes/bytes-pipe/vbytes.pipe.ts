@@ -5,9 +5,9 @@ import { isNumberFinite, isPositive, isInteger, toDecimal } from './utils';
 export type ByteUnit = 'vB' | 'kvB' | 'MvB' | 'GvB' | 'TvB';
 
 @Pipe({
-    name: 'vbytes'
+    name: 'Bytes'
 })
-export class VbytesPipe implements PipeTransform {
+export class BytesPipe implements PipeTransform {
 
     static formats: { [key: string]: { max: number, prev?: ByteUnit } } = {
         'vB': {max: 1000},
@@ -30,24 +30,24 @@ export class VbytesPipe implements PipeTransform {
         let unit = from;
         while (unit !== 'vB') {
             bytes *= 1024;
-            unit = VbytesPipe.formats[unit].prev!;
+            unit = BytesPipe.formats[unit].prev!;
         }
 
         if (to) {
-            const format = VbytesPipe.formats[to];
+            const format = BytesPipe.formats[to];
 
-            const result = toDecimal(VbytesPipe.calculateResult(format, bytes), decimal);
+            const result = toDecimal(BytesPipe.calculateResult(format, bytes), decimal);
 
-            return VbytesPipe.formatResult(result, to, plainText);
+            return BytesPipe.formatResult(result, to, plainText);
         }
 
-        for (const key in VbytesPipe.formats) {
-            const format = VbytesPipe.formats[key];
+        for (const key in BytesPipe.formats) {
+            const format = BytesPipe.formats[key];
             if (bytes < format.max) {
 
-                const result = toDecimal(VbytesPipe.calculateResult(format, bytes), decimal);
+                const result = toDecimal(BytesPipe.calculateResult(format, bytes), decimal);
 
-                return VbytesPipe.formatResult(result, key, plainText);
+                return BytesPipe.formatResult(result, key, plainText);
             }
         }
     }
@@ -60,7 +60,7 @@ export class VbytesPipe implements PipeTransform {
     }
 
     static calculateResult(format: { max: number, prev?: ByteUnit }, bytes: number) {
-        const prev = format.prev ? VbytesPipe.formats[format.prev] : undefined;
+        const prev = format.prev ? BytesPipe.formats[format.prev] : undefined;
         return prev ? bytes / prev.max : bytes;
     }
 }

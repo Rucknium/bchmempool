@@ -124,8 +124,8 @@
         <note from="meaning" priority="1">transaction.fee</note>
       </trans-unit>
       <trans-unit datatype="html" id="e5026f6e33b13e7d8185288b9691d006a139d36d">
-        <source>Fee per vByte</source>
-        <target>Taxa por vByte</target>
+        <source>Fee per Byte</source>
+        <target>Taxa por Byte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
           <context context-type="linenumber">79</context>
@@ -135,7 +135,7 @@
           <context context-type="linenumber">153</context>
         </context-group>
         <note from="description" priority="1">Transaction fee</note>
-        <note from="meaning" priority="1">transaction.fee-per-vbyte</note>
+        <note from="meaning" priority="1">transaction.fee-per-Byte</note>
       </trans-unit>
       <trans-unit datatype="html" id="d2eb45d1cd8cd146b7cb0223ab97a4b03b614060">
         <source>sat/vB</source>
@@ -189,7 +189,7 @@
           <context context-type="linenumber">117</context>
         </context-group>
         <note from="description" priority="1">sat/vB</note>
-        <note from="meaning" priority="1">shared.sat-vbyte</note>
+        <note from="meaning" priority="1">shared.sat-Byte</note>
       </trans-unit>
       <trans-unit datatype="html" id="0d6ed649666c5cdcf12be0216d82051bba3614b0">
         <source>Included in block</source>
@@ -1021,22 +1021,22 @@
         <note from="description" priority="1">statistics.loading-graphs</note>
       </trans-unit>
       <trans-unit datatype="html" id="75c20c8a9cd9723d45bee0230dd582d7c2e4ecbc">
-        <source>Mempool by vBytes (sat/vByte)</source>
-        <target>Mempool em vBytes (sat/vByte)</target>
+        <source>Mempool by Bytes (sat/Byte)</source>
+        <target>Mempool em Bytes (sat/Byte)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
-        <note from="description" priority="1">statistics.memory-by-vBytes</note>
+        <note from="description" priority="1">statistics.memory-by-Bytes</note>
       </trans-unit>
       <trans-unit datatype="html" id="dc15ec15e6206b40133f2c1b06095ce75aaee1ef">
-        <source>Transaction vBytes per second (vB/s)</source>
-        <target>Transação vBytes por segundo (vB/s)</target>
+        <source>Transaction Bytes per second (B/s)</source>
+        <target>Transação Bytes por segundo (B/s)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/statistics/statistics.component.html</context>
           <context context-type="linenumber">57</context>
         </context-group>
-        <note from="description" priority="1">statistics.transaction-vbytes-per-second</note>
+        <note from="description" priority="1">statistics.transaction-Bytes-per-second</note>
       </trans-unit>
       <trans-unit datatype="html" id="e8104ec47dbdca878cd9d7aba4a3cb59378fcaf7">
         <source>Waiting for blocks...</source>
@@ -1049,13 +1049,13 @@
         <note from="meaning" priority="1">blockchain.waiting-for-blocks</note>
       </trans-unit>
       <trans-unit datatype="html" id="0ae5beecbbfc96bcdf4f9a637aa72687e81ef5e1">
-        <source>Tx vBytes per second:</source>
-        <target>Transação vBytes por segundo:</target>
+        <source>Tx Bytes per second:</source>
+        <target>Transação Bytes por segundo:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
-        <note from="description" priority="1">footer.tx-vbytes-per-second</note>
+        <note from="description" priority="1">footer.tx-Bytes-per-second</note>
       </trans-unit>
       <trans-unit datatype="html" id="7b8ceef54c3151c632777d309944c67d676a585f">
         <source>Mempool size:</source>
@@ -1080,13 +1080,13 @@
         <note from="description" priority="1">footer.backend-is-synchronizing</note>
       </trans-unit>
       <trans-unit datatype="html" id="64d40decf56cbb1187e01f1fe47b92e10ddfa45d">
-        <source>vBytes/s</source>
-        <target>vBytes/s</target>
+        <source>Bytes/s</source>
+        <target>Bytes/s</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
-        <note from="description" priority="1">shared.vbytes-per-second</note>
+        <note from="description" priority="1">shared.Bytes-per-second</note>
       </trans-unit>
       <trans-unit datatype="html" id="b2cb12c1680a46464cae5aa0d0d1d6914733a75d">
         <source>Fee span</source>
@@ -1372,14 +1372,14 @@
         <note from="description" priority="1">dashboard.incoming-transactions</note>
       </trans-unit>
       <trans-unit datatype="html" id="50904e472d4671388a20fbbb1ee9dfc0a4586fa1">
-        <source>vB/s</source>
-        <target>vB/s</target>
+        <source>B/s</source>
+        <target>B/s</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">185</context>
         </context-group>
-        <note from="description" priority="1">vB/s</note>
-        <note from="meaning" priority="1">shared.vbytes-per-second</note>
+        <note from="description" priority="1">B/s</note>
+        <note from="meaning" priority="1">shared.Bytes-per-second</note>
       </trans-unit>
       <trans-unit datatype="html" id="125c154b4a63daa7e993e1f4a8bea4c98a645142">
         <source>Difficulty adjustment</source>

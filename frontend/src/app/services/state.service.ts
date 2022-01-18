@@ -74,7 +74,7 @@ export class StateService {
   mempoolTransactions$ = new Subject<Transaction>();
   blockTransactions$ = new Subject<Transaction>();
   isLoadingWebSocket$ = new ReplaySubject<boolean>(1);
-  vbytesPerSecond$ = new ReplaySubject<number>(1);
+  BytesPerSecond$ = new ReplaySubject<number>(1);
   lastDifficultyAdjustment$ = new ReplaySubject<number>(1);
   previousRetarget$ = new ReplaySubject<number>(1);
   backendInfo$ = new ReplaySubject<IBackendInfo>(1);

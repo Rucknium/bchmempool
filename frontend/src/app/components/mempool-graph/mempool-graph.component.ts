@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Inject, LOCALE_ID, ChangeDetectionStrategy, OnChanges } from '@angular/core';
 import { formatDate } from '@angular/common';
-import { VbytesPipe } from 'src/app/shared/pipes/bytes-pipe/vbytes.pipe';
+import { BytesPipe } from 'src/app/shared/pipes/bytes-pipe/Bytes.pipe';
 import * as Chartist from '@mempool/chartist';
 import { OptimizedMempoolStats } from 'src/app/interfaces/node-api.interface';
 import { StateService } from 'src/app/services/state.service';
@@ -25,7 +25,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
   inverted: boolean;
 
   constructor(
-    private vbytesPipe: VbytesPipe,
+    private BytesPipe: BytesPipe,
     private stateService: StateService,
     @Inject(LOCALE_ID) private locale: string,
     private storageService: StorageService,
@@ -71,7 +71,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
         offset: this.offsetX,
       },
       axisY: {
-        labelInterpolationFnc: (value: number): any => this.vbytesPipe.transform(value, 2, 'vB', 'MvB', true),
+        labelInterpolationFnc: (value: number): any => this.BytesPipe.transform(value, 2, 'vB', 'MvB', true),
         offset: this.showLegend ? 160 : 60,
       },
       plugins: this.inverted ? [Chartist.plugins.ctTargetLine({ value: this.stateService.blockVSize })] : []
@@ -107,16 +107,16 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
     mempoolStats.reverse();
     const labels = mempoolStats.map(stats => stats.added);
 
-    const finalArrayVbyte = this.generateArray(mempoolStats);
+    const finalArrayByte = this.generateArray(mempoolStats);
 
     // Only Liquid has lower than 1 sat/vb transactions
     if (this.stateService.network !== 'liquid') {
-      finalArrayVbyte.shift();
+      finalArrayByte.shift();
     }
 
     return {
       labels: labels,
-      series: finalArrayVbyte
+      series: finalArrayByte
     };
   }
 

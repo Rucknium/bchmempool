@@ -1,6 +1,6 @@
 import config from '../config';
 import bitcoinApi from './bitcoin/bitcoin-api-factory';
-import { TransactionExtended, VbytesPerSecond } from '../mempool.interfaces';
+import { TransactionExtended, BytesPerSecond } from '../mempool.interfaces';
 import logger from '../logger';
 import { Common } from './common';
 import transactionUtils from './transaction-utils';
@@ -21,8 +21,8 @@ class Mempool {
   private txPerSecondArray: number[] = [];
   private txPerSecond: number = 0;
 
-  private vBytesPerSecondArray: VbytesPerSecond[] = [];
-  private vBytesPerSecond: number = 0;
+  private BytesPerSecondArray: BytesPerSecond[] = [];
+  private BytesPerSecond: number = 0;
   private mempoolProtection = 0;
   private latestTransactions: any[] = [];
 
@@ -72,8 +72,8 @@ class Mempool {
     return this.txPerSecond;
   }
 
-  public getVBytesPerSecond(): number {
-    return this.vBytesPerSecond;
+  public getBytesPerSecond(): number {
+    return this.BytesPerSecond;
   }
 
   public getFirstSeenForTransactions(txIds: string[]): number[] {
@@ -111,7 +111,7 @@ class Mempool {
           txCount++;
           if (this.inSync) {
             this.txPerSecondArray.push(new Date().getTime());
-            this.vBytesPerSecondArray.push({
+            this.BytesPerSecondArray.push({
               unixTime: new Date().getTime(),
               vSize: transaction.vsize,
             });
@@ -188,10 +188,10 @@ class Mempool {
     this.txPerSecondArray = this.txPerSecondArray.filter((unixTime) => unixTime > nowMinusTimeSpan);
     this.txPerSecond = this.txPerSecondArray.length / config.STATISTICS.TX_PER_SECOND_SAMPLE_PERIOD || 0;
 
-    this.vBytesPerSecondArray = this.vBytesPerSecondArray.filter((data) => data.unixTime > nowMinusTimeSpan);
-    if (this.vBytesPerSecondArray.length) {
-      this.vBytesPerSecond = Math.round(
-        this.vBytesPerSecondArray.map((data) => data.vSize).reduce((a, b) => a + b) / config.STATISTICS.TX_PER_SECOND_SAMPLE_PERIOD
+    this.BytesPerSecondArray = this.BytesPerSecondArray.filter((data) => data.unixTime > nowMinusTimeSpan);
+    if (this.BytesPerSecondArray.length) {
+      this.BytesPerSecond = Math.round(
+        this.BytesPerSecondArray.map((data) => data.vSize).reduce((a, b) => a + b) / config.STATISTICS.TX_PER_SECOND_SAMPLE_PERIOD
       );
     }
   }

@@ -82,7 +82,7 @@ export interface Statistic {
   added: string;
   unconfirmed_transactions: number;
   tx_per_second: number;
-  vbytes_per_second: number;
+  Bytes_per_second: number;
   total_fee: number;
   mempool_byte_weight: number;
   fee_data: string;
@@ -132,7 +132,7 @@ export interface OptimizedStatistic {
   added: string;
   unconfirmed_transactions: number;
   tx_per_second: number;
-  vbytes_per_second: number;
+  Bytes_per_second: number;
   total_fee: number;
   mempool_byte_weight: number;
   vsizes: number[];
@@ -147,7 +147,7 @@ export interface WebsocketResponse {
   'track-bisq-market': string;
 }
 
-export interface VbytesPerSecond {
+export interface BytesPerSecond {
   unixTime: number;
   vSize: number;
 }
