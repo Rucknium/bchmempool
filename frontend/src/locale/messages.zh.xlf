@@ -2631,7 +2631,7 @@
         <note from="description" priority="1">block.median-fee</note>
       </trans-unit>
       <trans-unit datatype="html" id="d2eb45d1cd8cd146b7cb0223ab97a4b03b614060">
-        <source>sat/vB</source>
+        <source>sat/B</source>
         <target>聪/字节</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/block/block.component.html</context>
@@ -2701,7 +2701,7 @@
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">171,175</context>
         </context-group>
-        <note from="description" priority="1">sat/vB</note>
+        <note from="description" priority="1">sat/B</note>
         <note from="meaning" priority="1">shared.sat-vbyte</note>
       </trans-unit>
       <trans-unit datatype="html" id="855f852e5642a1279605465df0cbbe78c2622648">
