@@ -178,8 +178,8 @@
         <note from="meaning" priority="1">transaction.fee-per-vbyte</note>
       </trans-unit>
       <trans-unit datatype="html" id="d2eb45d1cd8cd146b7cb0223ab97a4b03b614060">
-        <source>sat/vB</source>
-        <target>sat/vB</target>
+        <source>sat/B</source>
+        <target>sat/B</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/transaction/transaction.component.html</context>
           <context context-type="linenumber">81</context>
@@ -228,7 +228,7 @@
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">117</context>
         </context-group>
-        <note from="description" priority="1">sat/vB</note>
+        <note from="description" priority="1">sat/B</note>
         <note from="meaning" priority="1">shared.sat-vbyte</note>
       </trans-unit>
       <trans-unit datatype="html" id="0d6ed649666c5cdcf12be0216d82051bba3614b0">
