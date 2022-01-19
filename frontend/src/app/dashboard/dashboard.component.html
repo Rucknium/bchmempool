@@ -198,7 +198,7 @@
     <ng-template #inSync>
       <div class="progress inc-tx-progress-bar">
         <div class="progress-bar {{ mempoolInfoData.value.progressClass }}" role="progressbar" [ngStyle]="{'width': mempoolInfoData.value.progressWidth}">&nbsp;</div>
-        <div class="progress-text">{{ mempoolInfoData.value.vBytesPerSecond | ceil | number }} <ng-container i18n="shared.vbytes-per-second|vB/s">vB/s</ng-container></div>
+        <div class="progress-text">{{ mempoolInfoData.value.vBytesPerSecond | ceil | number }} <ng-container i18n="shared.vbytes-per-second|vB/s">B/s</ng-container></div>
       </div>
     </ng-template>
   </ng-template>

@@ -1730,13 +1730,13 @@
         <note from="description" priority="1">dashboard.incoming-transactions</note>
       </trans-unit>
       <trans-unit datatype="html" id="50904e472d4671388a20fbbb1ee9dfc0a4586fa1">
-        <source>vB/s</source>
-        <target>vB/s</target>
+        <source>B/s</source>
+        <target>B/s</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">185</context>
         </context-group>
-        <note from="description" priority="1">vB/s</note>
+        <note from="description" priority="1">B/s</note>
         <note from="meaning" priority="1">shared.vbytes-per-second</note>
       </trans-unit>
       <trans-unit datatype="html" id="125c154b4a63daa7e993e1f4a8bea4c98a645142">
