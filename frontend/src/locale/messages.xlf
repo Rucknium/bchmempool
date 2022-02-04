@@ -3251,7 +3251,7 @@
           <context context-type="linenumber">212,216</context>
         </context-group>
         <note priority="1" from="description">Transaction Virtual Size</note>
-        <note priority="1" from="meaning">transaction.vsize</note>
+        <note priority="1" from="meaning">transaction.size</note>
       </trans-unit>
       <trans-unit id="3e322ffba6477484e0dd2e65650fdd70322ea6d0" datatype="html">
         <source>Fee rate</source>

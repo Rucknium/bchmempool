@@ -113,7 +113,7 @@ class Mempool {
             this.txPerSecondArray.push(new Date().getTime());
             this.vBytesPerSecondArray.push({
               unixTime: new Date().getTime(),
-              vSize: transaction.vsize,
+              vSize: transaction.size,
             });
           }
           hasChange = true;

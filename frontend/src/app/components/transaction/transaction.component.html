@@ -152,7 +152,7 @@
             <tr>
               <th i18n="transactions-list.vout.scriptpubkey-type">Type</th>
               <th i18n="dashboard.latest-transactions.txid">TXID</th>
-              <th class="d-none d-lg-table-cell" i18n="transaction.vsize|Transaction Virtual Size">Virtual size</th>
+              <th class="d-none d-lg-table-cell" i18n="transaction.size|Transaction Virtual Size">Virtual size</th>
               <th i18n="transaction.fee-rate|Transaction fee rate">Fee rate</th>
               <th class="d-none d-lg-table-cell"></th>
             </tr>
@@ -209,7 +209,7 @@
             <td [innerHTML]="tx.size | bytes: 2"></td>
           </tr>
           <tr>
-            <td i18n="transaction.vsize|Transaction Virtual Size">Virtual size</td>
+            <td i18n="transaction.size|Transaction Virtual Size">Virtual size</td>
             <td [innerHTML]="tx.weight / 4 | vbytes: 2"></td>
           </tr>
           <tr>

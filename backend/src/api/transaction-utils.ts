@@ -27,7 +27,7 @@ class TransactionUtils {
 
   private extendTransaction(transaction: IEsploraApi.Transaction): TransactionExtended {
     // @ts-ignore
-    if (transaction.vsize) {
+    if (transaction.size) {
       // @ts-ignore
       return transaction;
     }

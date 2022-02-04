@@ -87,9 +87,9 @@ class Statistics {
       for (let i = 0; i < logFees.length; i++) {
         if ((logFees[i] === 2000 && transaction.effectiveFeePerVsize >= 2000) || transaction.effectiveFeePerVsize <= logFees[i]) {
           if (weightVsizeFees[logFees[i]]) {
-            weightVsizeFees[logFees[i]] += transaction.vsize;
+            weightVsizeFees[logFees[i]] += transaction.size;
           } else {
-            weightVsizeFees[logFees[i]] = transaction.vsize;
+            weightVsizeFees[logFees[i]] = transaction.size;
           }
           break;
         }

@@ -127,7 +127,7 @@
           <context context-type="linenumber">181</context>
         </context-group>
         <note from="description" priority="1">Transaction Virtual Size</note>
-        <note from="meaning" priority="1">transaction.vsize</note>
+        <note from="meaning" priority="1">transaction.size</note>
       </trans-unit>
       <trans-unit datatype="html" id="13f5a75f3e01e5924e45052d2f336eda8bac37e8">
         <source>Weight</source>
