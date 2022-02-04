@@ -12,24 +12,18 @@ export namespace IBitcoinApi {
   export interface RawMempool { [txId: string]: MempoolEntry; }
 
   export interface MempoolEntry {
-    vsize: number;                   //  (numeric) virtual transaction size as defined in BIP 141.
-    weight: number;                  //  (numeric) transaction weight as defined in BIP 141.
+    size: number;                    //  (numeric) transaction size in bytes
+    fee: number;                     //  (numeric) transaction fee in BCH
+    mofifiedfee: number;             // (numeric) transaction fee with fee deltas used for mining priority
     time: number;                    //  (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
     height: number;                  //  (numeric) block height when transaction entered pool
-    descendantcount: number;         //  (numeric) number of in-mempool descendant transactions (including this one)
-    descendantsize: number;          //  (numeric) virtual transaction size of in-mempool descendants (including this one)
-    ancestorcount: number;           //  (numeric) number of in-mempool ancestor transactions (including this one)
+    startingpriority: number;        //  (numeric) priority when transaction entered pool
+    currentpriority: number;         //  (numeric) transaction priority now
+    ancestorcount: number;           //  (numeric) size of in-mempool ancestors (including this one)
     ancestorsize: number;            //  (numeric) virtual transaction size of in-mempool ancestors (including this one)
-    wtxid: string;                   //  (string) hash of serialized transactionumber; including witness data
-    fees: {
-      base: number;                  //  (numeric) transaction fee in BCH
-      modified: number;              //  (numeric) transaction fee with fee deltas used for mining priority in BCH
-      ancestor: number;              //  (numeric) modified fees (see above) of in-mempool ancestors (including this one) in BCH
-      descendant: number;            //  (numeric) modified fees (see above) of in-mempool descendants (including this one) in BCH
-    };
+    ancestorfees: string;            //  (numeric) modified fees (see above) of in-mempool ancestors (including this one)
     depends: string[];               //  (string) parent transaction id
     spentby: string[];               //  (array) unconfirmed transactions spending outputs from this transaction
-    'bip125-replaceable': boolean;   //  (boolean) Whether this transaction could be replaced due to BIP125 (replace-by-fee)
   }
 
   export interface Block {
