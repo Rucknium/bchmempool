@@ -112,6 +112,7 @@ class BitcoinApi implements AbstractBitcoinApi {
       version: transaction.version,
       locktime: transaction.locktime,
       size: transaction.size,
+      weight: transaction.size,
       fee: 0,
       vin: [],
       vout: [],
@@ -174,7 +175,7 @@ class BitcoinApi implements AbstractBitcoinApi {
       merkle_root: block.merkleroot,
       tx_count: block.nTx,
       size: block.size,
-      weight: block.weight,
+      weight: block.size,
       previousblockhash: block.previousblockhash,
     };
   }
