@@ -53,7 +53,7 @@ export interface CpfpInfo {
 export interface TransactionStripped {
   txid: string;
   fee: number;
-  vsize: number;
+  size: number;
   value: number;
 }
 export interface BlockExtended extends IEsploraApi.Block {
