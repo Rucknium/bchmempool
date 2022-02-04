@@ -256,7 +256,7 @@ class WebsocketHandler {
               const fullTx = await transactionUtils.$getTransactionExtended(tx.txid, true);
               response['tx'] = fullTx;
             } catch (e) {
-              logger.debug('Error finding transaction in mempool: ' + (e instanceof Error ? e.message : e));
+              logger.debug('Error finding transaction in mempool 2: ' + (e instanceof Error ? e.message : e));
             }
           } else {
             response['tx'] = tx;
@@ -276,7 +276,7 @@ class WebsocketHandler {
                 const fullTx = await transactionUtils.$getTransactionExtended(tx.txid, true);
                 foundTransactions.push(fullTx);
               } catch (e) {
-                logger.debug('Error finding transaction in mempool: ' + (e instanceof Error ? e.message : e));
+                logger.debug('Error finding transaction in mempool 3: ' + (e instanceof Error ? e.message : e));
               }
             } else {
               foundTransactions.push(tx);
@@ -290,7 +290,7 @@ class WebsocketHandler {
                 const fullTx = await transactionUtils.$getTransactionExtended(tx.txid, true);
                 foundTransactions.push(fullTx);
               } catch (e) {
-                logger.debug('Error finding transaction in mempool: ' + (e instanceof Error ? e.message : e));
+                logger.debug('Error finding transaction in mempool 4: ' + (e instanceof Error ? e.message : e));
               }
             } else {
               foundTransactions.push(tx);
@@ -341,7 +341,7 @@ class WebsocketHandler {
                 const fullTx = await transactionUtils.$getTransactionExtended(rbfTransaction, true);
                 response['rbfTransaction'] = fullTx;
               } catch (e) {
-                logger.debug('Error finding transaction in mempool: ' + (e instanceof Error ? e.message : e));
+                logger.debug('Error finding transaction in mempool 5: ' + (e instanceof Error ? e.message : e));
               }
             } else {
               response['rbfTransaction'] = rbfTx;
