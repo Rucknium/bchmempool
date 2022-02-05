@@ -28,7 +28,7 @@ class FiatConversion {
   private async updateCurrency(): Promise<void> {
     try {
       const response = await axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=bch&tsyms=usd', { timeout: 10000 });
-      const usd = response.BCH.USD;
+      const usd = response["BCH"]["USD"];
       this.conversionRates = {
         'USD': usd,
       };
