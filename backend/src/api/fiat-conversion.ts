@@ -27,9 +27,8 @@ class FiatConversion {
 
   private async updateCurrency(): Promise<void> {
     try {
-     // const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin-cash&vs_currencies=usd', { timeout: 10000 });
-      const response = {"bitcoin-cash":{"usd":388.24}};
-      const usd = response["bitcoin-cash"]["usd"];
+      const response = await axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=bch&tsyms=usd', { timeout: 10000 });
+      const usd = response.BCH.USD;
       this.conversionRates = {
         'USD': usd,
       };
