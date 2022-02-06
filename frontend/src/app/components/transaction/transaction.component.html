@@ -167,8 +167,8 @@
                     <span class="d-none d-lg-inline">{{ cpfpInfo.bestDescendant.txid }}</span>
                   </a>
                 </td>
-                <td class="d-none d-lg-table-cell" [innerHTML]="cpfpInfo.bestDescendant.weight / 4 | vbytes: 2"></td>
-                <td>{{ cpfpInfo.bestDescendant.fee / (cpfpInfo.bestDescendant.weight / 4) | feeRounding }} <span class="symbol" i18n="shared.sat-vbyte|sat/vB">sat/B</span></td>
+                <td class="d-none d-lg-table-cell" [innerHTML]="cpfpInfo.bestDescendant.weight | vbytes: 2"></td>
+                <td>{{ cpfpInfo.bestDescendant.fee / (cpfpInfo.bestDescendant.weight) | feeRounding }} <span class="symbol" i18n="shared.sat-vbyte|sat/vB">sat/B</span></td>
                 <td class="d-none d-lg-table-cell"><fa-icon class="arrow-green" [icon]="['fas', 'angle-double-up']" [fixedWidth]="true"></fa-icon></td>
               </tr>
             </ng-template>
@@ -180,8 +180,8 @@
                     <span class="d-none d-lg-inline">{{ cpfpTx.txid }}</span>
                   </a>
                 </td>
-                <td class="d-none d-lg-table-cell" [innerHTML]="cpfpTx.weight / 4 | vbytes: 2"></td>
-                <td>{{ cpfpTx.fee / (cpfpTx.weight / 4) | feeRounding }} <span class="symbol" i18n="shared.sat-vbyte|sat/vB">sat/B</span></td>
+                <td class="d-none d-lg-table-cell" [innerHTML]="cpfpTx.weight | vbytes: 2"></td>
+                <td>{{ cpfpTx.fee / (cpfpTx.weight) | feeRounding }} <span class="symbol" i18n="shared.sat-vbyte|sat/vB">sat/B</span></td>
                 <td class="d-none d-lg-table-cell"><fa-icon *ngIf="roundToOneDecimal(cpfpTx) < roundToOneDecimal(tx)" class="arrow-red" [icon]="['fas', 'angle-double-down']" [fixedWidth]="true"></fa-icon></td>
               </tr>
             </ng-template>
@@ -210,7 +210,7 @@
           </tr>
           <tr>
             <td i18n="transaction.size|Transaction Virtual Size">Virtual size</td>
-            <td [innerHTML]="tx.weight / 4 | vbytes: 2"></td>
+            <td [innerHTML]="tx.weight | vbytes: 2"></td>
           </tr>
           <tr>
             <td i18n="transaction.weight|Transaction Weight">Weight</td>

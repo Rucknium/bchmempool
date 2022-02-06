@@ -101,7 +101,7 @@ export class TransactionComponent implements OnInit, OnDestroy {
           return;
         }
         const lowerFeeParents = cpfpInfo.ancestors.filter(
-          (parent) => parent.fee / (parent.weight / 4) < this.tx.feePerVsize
+          (parent) => parent.fee / (parent.weight) < this.tx.feePerVsize
         );
         let totalWeight =
           this.tx.weight +
@@ -115,7 +115,7 @@ export class TransactionComponent implements OnInit, OnDestroy {
           totalFees += cpfpInfo.bestDescendant.fee;
         }
 
-        this.tx.effectiveFeePerVsize = totalFees / (totalWeight / 4);
+        this.tx.effectiveFeePerVsize = totalFees / (totalWeight);
         this.stateService.markBlock$.next({
           txFeePerVSize: this.tx.effectiveFeePerVsize,
         });
@@ -177,7 +177,7 @@ export class TransactionComponent implements OnInit, OnDestroy {
           if (tx.fee === undefined) {
             this.tx.fee = 0;
           }
-          this.tx.feePerVsize = tx.fee / (tx.weight / 4);
+          this.tx.feePerVsize = tx.fee / (tx.weight);
           this.isLoadingTx = false;
           this.error = undefined;
           this.waitingForTransaction = false;
@@ -254,7 +254,7 @@ export class TransactionComponent implements OnInit, OnDestroy {
       }
 
       const txFeePerVSize =
-        this.tx.effectiveFeePerVsize || this.tx.fee / (this.tx.weight / 4);
+        this.tx.effectiveFeePerVsize || this.tx.fee / (this.tx.weight);
 
       for (const block of mempoolBlocks) {
         for (let i = 0; i < block.feeRange.length - 1; i++) {
@@ -296,7 +296,7 @@ export class TransactionComponent implements OnInit, OnDestroy {
   }
 
   roundToOneDecimal(cpfpTx: any): number {
-    return +(cpfpTx.fee / (cpfpTx.weight / 4)).toFixed(1);
+    return +(cpfpTx.fee / (cpfpTx.weight)).toFixed(1);
   }
 
   ngOnDestroy() {

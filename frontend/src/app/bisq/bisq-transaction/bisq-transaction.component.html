@@ -67,7 +67,7 @@
                 <tr>
                   <td i18n="transaction.fee-per-vbyte|Transaction fee">Fee per vByte</td>
                   <td *ngIf="!isLoadingTx; else loadingTxFee">
-                    {{ tx.fee / (tx.weight / 4) | feeRounding }} <span class="symbol">sat/B</span>
+                    {{ tx.fee / (tx.weight) | feeRounding }} <span class="symbol">sat/B</span>
                     &nbsp;
                     <app-tx-fee-rating [tx]="tx"></app-tx-fee-rating>
                   </td>

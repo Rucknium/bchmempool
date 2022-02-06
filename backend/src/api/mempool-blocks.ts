@@ -105,7 +105,7 @@ class MempoolBlocks {
     }
     return {
       blockSize: blockSize,
-      blockVSize: blockWeight / 4,
+      blockVSize: blockWeight,
       nTx: transactions.length,
       totalFees: transactions.reduce((acc, cur) => acc + cur.fee, 0),
       medianFee: Common.percentile(transactions.map((tx) => tx.effectiveFeePerVsize), config.MEMPOOL.RECOMMENDED_FEE_PERCENTILE),

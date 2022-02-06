@@ -63,7 +63,7 @@ export class Common {
     return {
       txid: tx.txid,
       fee: tx.fee,
-      size: tx.weight / 4,
+      size: tx.weight,
       value: tx.vout.reduce((acc, vout) => acc + (vout.value ? vout.value : 0), 0),
     };
   }
@@ -105,7 +105,7 @@ export class Common {
       totalFees += tx.bestDescendant.fee;
     }
 
-    tx.effectiveFeePerVsize = Math.max(config.MEMPOOL.NETWORK === 'liquid' ? 0.1 : 1, totalFees / (totalWeight / 4));
+    tx.effectiveFeePerVsize = Math.max(config.MEMPOOL.NETWORK === 'liquid' ? 0.1 : 1, totalFees / (totalWeight));
     tx.cpfpChecked = true;
 
     return {
@@ -124,7 +124,7 @@ export class Common {
 
       const parentTx = memPool[parent.txid];
       if (parentTx) {
-        if (tx.bestDescendant && tx.bestDescendant.fee / (tx.bestDescendant.weight / 4) > parentTx.feePerVsize) {
+        if (tx.bestDescendant && tx.bestDescendant.fee / (tx.bestDescendant.weight) > parentTx.feePerVsize) {
           if (parentTx.bestDescendant && parentTx.bestDescendant.fee < tx.fee + tx.bestDescendant.fee) {
             parentTx.bestDescendant = {
               weight: tx.weight + tx.bestDescendant.weight,

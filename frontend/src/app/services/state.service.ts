@@ -119,7 +119,7 @@ export class StateService {
       this.networkChanged$.next(this.env.BASE_MODULE);
     }
 
-    this.blockVSize = this.env.BLOCK_WEIGHT_UNITS / 4;
+    this.blockVSize = this.env.BLOCK_WEIGHT_UNITS;
   }
 
   setNetworkBasedonUrl(url: string) {
