@@ -12,7 +12,7 @@ export class FiatComponent implements OnInit {
   conversions$: Observable<any>;
 
   @Input() value: number;
-  @Input() digitsInfo = '1.2-2';
+  @Input() digitsInfo = '1.3-3';
 
   constructor(
     private stateService: StateService,

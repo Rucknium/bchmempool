@@ -14,7 +14,7 @@ export namespace IBitcoinApi {
   export interface MempoolEntry {
     size: number;                    //  (numeric) transaction size in bytes
     fee: number;                     //  (numeric) transaction fee in BCH
-    mofifiedfee: number;             // (numeric) transaction fee with fee deltas used for mining priority
+    modifiedfee: number;             // (numeric) transaction fee with fee deltas used for mining priority
     time: number;                    //  (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
     height: number;                  //  (numeric) block height when transaction entered pool
     startingpriority: number;        //  (numeric) priority when transaction entered pool
