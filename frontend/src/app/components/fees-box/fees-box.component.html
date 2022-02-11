@@ -8,7 +8,7 @@
     </div>
     <div class="item">
       <h5 class="card-title" i18n="fees-box.medium-priority">Medium priority</h5>
-      <div class="card-text" i18n-ngbTooltip="Based on a typical 2-input/2-output transaction of 370 bytes" placement="bottom">
+      <div class="card-text" i18n-ngbTooltip="Transaction fee tooltip" ngbTooltip="Based on a typical 2-input/2-output transaction of 370 bytes" placement="bottom">
         <div class="fee-text">{{ feeEstimations.halfHourFee }} <span i18n="shared.sat-vbyte|sat/vB">sat/B</span></div> <span class="fiat"><app-fiat [value]="feeEstimations.halfHourFee * 370" ></app-fiat></span>
       </div>
     </div>
