@@ -72,7 +72,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
         offset: this.offsetX,
       },
       axisY: {
-        labelInterpolationFnc: (value: number): any => this.BytesPipe.transform(value, 2, 'B', 'MB', true),
+        labelInterpolationFnc: (value: number): any => this.BytesPipe.transform(value, 2, 'B', 'MB'),
         offset: this.showLegend ? 160 : 60,
       },
       plugins: this.inverted ? [Chartist.plugins.ctTargetLine({ value: this.stateService.blockVSize })] : []
