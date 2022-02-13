@@ -6,10 +6,6 @@ import { OptimizedMempoolStats } from 'src/app/interfaces/node-api.interface';
 import { StateService } from 'src/app/services/state.service';
 import { StorageService } from 'src/app/services/storage.service';
 
-import logger from '../../../../../backend/src/logger';
-
-logger.debug("{***Hello world, i am a debug message***}");
-
 @Component({
   selector: 'app-mempool-graph',
   templateUrl: './mempool-graph.component.html',
