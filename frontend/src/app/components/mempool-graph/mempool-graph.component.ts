@@ -80,6 +80,8 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
     if (this.showLegend) {
       const legendNames: string[] = [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100, 125, 150, 175, 200,
             250, 300, 350, 400].map((sat, i, arr) => {
+              console.log("hello world")
+              console.log(sat)
               if (sat === 400) {
                 return '350+';
               }
