@@ -1,11 +1,10 @@
 import { Component, OnInit, Input, Inject, LOCALE_ID, ChangeDetectionStrategy, OnChanges } from '@angular/core';
 import { formatDate } from '@angular/common';
-import { BytesPipe } from 'src/app/shared/pipes/bytes-pipe/bytes.pipe';
+import { VbytesPipe } from 'src/app/shared/pipes/bytes-pipe/vbytes.pipe';
 import * as Chartist from '@mempool/chartist';
 import { OptimizedMempoolStats } from 'src/app/interfaces/node-api.interface';
 import { StateService } from 'src/app/services/state.service';
 import { StorageService } from 'src/app/services/storage.service';
-
 
 @Component({
   selector: 'app-mempool-graph',
@@ -26,7 +25,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
   inverted: boolean;
 
   constructor(
-    private BytesPipe: BytesPipe,
+    private vbytesPipe: VbytesPipe,
     private stateService: StateService,
     @Inject(LOCALE_ID) private locale: string,
     private storageService: StorageService,
@@ -72,7 +71,7 @@ export class MempoolGraphComponent implements OnInit, OnChanges {
         offset: this.offsetX,
       },
       axisY: {
-        labelInterpolationFnc: (value: number): any => this.BytesPipe.transform(value, 2, 'B', 'MB'),
+        labelInterpolationFnc: (value: number): any => this.vbytesPipe.transform(value, 2, 'vB', 'MvB', true),
         offset: this.showLegend ? 160 : 60,
       },
       plugins: this.inverted ? [Chartist.plugins.ctTargetLine({ value: this.stateService.blockVSize })] : []
