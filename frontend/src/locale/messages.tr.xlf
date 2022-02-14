@@ -3271,7 +3271,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="time-since">
         <source><x equiv-text="dateStrings.i18nYear" id="DATE"/> ago</source>
-        <target><x equiv-text="dateStrings.i18nYear" id="DATE"/>önce</target>
+        <target><x equiv-text="dateStrings.i18nYear" id="DATE"/> önce</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/time-since/time-since.component.ts</context>
           <context context-type="linenumber">67</context>
@@ -3391,7 +3391,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="time-until">
         <source>In ~<x equiv-text="dateStrings.i18nMinute" id="DATE"/></source>
-        <target>Yaklaşık <x equiv-text="dateStrings.i18nMinute" id="DATE"/>içinde</target>
+        <target>Yaklaşık <x equiv-text="dateStrings.i18nMinute" id="DATE"/> içinde</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/time-until/time-until.component.ts</context>
           <context context-type="linenumber">66</context>
@@ -4167,7 +4167,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.minute">
         <source><x equiv-text="counter" id="DATE"/> minute</source>
-        <target><x equiv-text="counter" id="DATE"/>dakika</target>
+        <target><x equiv-text="counter" id="DATE"/> dakika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">13</context>
@@ -4175,7 +4175,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.minutes">
         <source><x equiv-text="counter" id="DATE"/> minutes</source>
-        <target><x equiv-text="counter" id="DATE"/>dakika</target>
+        <target><x equiv-text="counter" id="DATE"/> dakika</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">14</context>
