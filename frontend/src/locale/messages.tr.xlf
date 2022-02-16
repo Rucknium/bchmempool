@@ -4074,7 +4074,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="5db469cd0357e5f578b85a996f7e99c9e4148ff5">
         <source>Current Period</source>
-        <target>Şimdiki periyod</target>
+        <target>Şimdiki Periyot</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
           <context context-type="linenumber">247,248</context>
@@ -4087,7 +4087,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.year">
         <source><x equiv-text="counter" id="DATE"/> year</source>
-        <target><x equiv-text="counter" id="DATE"/>yıl</target>
+        <target><x equiv-text="counter" id="DATE"/> yıl</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">3</context>
@@ -4095,7 +4095,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.years">
         <source><x equiv-text="counter" id="DATE"/> years</source>
-        <target><x equiv-text="counter" id="DATE"/>yıllar</target>
+        <target><x equiv-text="counter" id="DATE"/> yıllar</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">4</context>
@@ -4103,7 +4103,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.month">
         <source><x equiv-text="counter" id="DATE"/> month</source>
-        <target><x equiv-text="counter" id="DATE"/>ay</target>
+        <target><x equiv-text="counter" id="DATE"/> ay</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">5</context>
@@ -4111,7 +4111,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.months">
         <source><x equiv-text="counter" id="DATE"/> months</source>
-        <target><x equiv-text="counter" id="DATE"/>ay</target>
+        <target><x equiv-text="counter" id="DATE"/> ay</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">6</context>
@@ -4119,7 +4119,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.week">
         <source><x equiv-text="counter" id="DATE"/> week</source>
-        <target><x equiv-text="counter" id="DATE"/>hafta</target>
+        <target><x equiv-text="counter" id="DATE"/> hafta</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">7</context>
@@ -4127,7 +4127,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.weeks">
         <source><x equiv-text="counter" id="DATE"/> weeks</source>
-        <target><x equiv-text="counter" id="DATE"/>hafta</target>
+        <target><x equiv-text="counter" id="DATE"/> hafta</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">8</context>
@@ -4135,7 +4135,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.day">
         <source><x equiv-text="counter" id="DATE"/> day</source>
-        <target><x equiv-text="counter" id="DATE"/>gün</target>
+        <target><x equiv-text="counter" id="DATE"/> gün</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">9</context>
@@ -4143,7 +4143,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.days">
         <source><x equiv-text="counter" id="DATE"/> days</source>
-        <target><x equiv-text="counter" id="DATE"/>gün</target>
+        <target><x equiv-text="counter" id="DATE"/> gün</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">10</context>
@@ -4151,7 +4151,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.hour">
         <source><x equiv-text="counter" id="DATE"/> hour</source>
-        <target><x equiv-text="counter" id="DATE"/>saat</target>
+        <target><x equiv-text="counter" id="DATE"/> saat</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">11</context>
@@ -4159,7 +4159,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.hours">
         <source><x equiv-text="counter" id="DATE"/> hours</source>
-        <target><x equiv-text="counter" id="DATE"/>saat</target>
+        <target><x equiv-text="counter" id="DATE"/> saat</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">12</context>
@@ -4183,7 +4183,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.second">
         <source><x equiv-text="counter" id="DATE"/> second</source>
-        <target><x equiv-text="counter" id="DATE"/>saniye</target>
+        <target><x equiv-text="counter" id="DATE"/> saniye</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">15</context>
@@ -4191,7 +4191,7 @@
       </trans-unit>
       <trans-unit datatype="html" id="date-base.seconds">
         <source><x equiv-text="counter" id="DATE"/> seconds</source>
-        <target><x equiv-text="counter" id="DATE"/>saniye</target>
+        <target><x equiv-text="counter" id="DATE"/> saniye</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/i18n/dates.ts</context>
           <context context-type="linenumber">16</context>
