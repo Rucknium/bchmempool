@@ -1,3 +1,8 @@
+# Deprecation Notice
+
+## **This repository is deprecated.** Please use and contribute to https://github.com/BitcoinCash1/Explorer instead.
+
+
 # The Mempool Open Source Project
 
 Mempool is the fully featured visualizer, explorer, and API service running on [mempool.space](https://mempool.space/), an open source project developed and operated for the benefit of the Bitcoin community, with a focus on the emerging transaction fee market to help our transition into a multi-layer ecosystem.
